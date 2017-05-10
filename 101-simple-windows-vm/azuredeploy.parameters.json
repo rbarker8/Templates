@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "newStorageAccountName": {
-      "value": "myStorageAccount"
+      "value": "rbstore2"
     },
     "adminUsername": {
       "value": "admin123"
@@ -12,7 +12,13 @@
       "value": "ADmin123_!"
     },
     "dnsNameForPublicIP": {
-      "value": "myDnsName"
+      "value": "rbjkwl"
+    },
+    "location": {
+      "value": "West US"
+    },
+    "sizeOfDiskInGB": {
+      "value": "20"
     }
   }
 }
