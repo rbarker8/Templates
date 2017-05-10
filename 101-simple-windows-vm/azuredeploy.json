@@ -26,7 +26,7 @@
         "description": "Unique DNS Name for the Public IP used to access the Virtual Machine."
       }
     },
-      "location": {
+    "location": {
       "type": "string",
       "defaultValue": "West US",
       "allowedValues": [
@@ -49,7 +49,7 @@
         "description": "The Windows version for the VM. This will pick a fully patched image of this given Windows version. Allowed values: 2008-R2-SP1, 2012-Datacenter, 2012-R2-Datacenter."
       }
     },
-        "sizeOfDiskInGB": {
+    "sizeOfDiskInGB": {
       "type": "string",
       "metadata": {
         "description": "Size of the empty data disk in GB"
@@ -73,7 +73,7 @@
     "virtualNetworkName": "MyVNET",
     "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',variables('virtualNetworkName'))]",
     "subnetRef": "[concat(variables('vnetID'),'/subnets/',variables('subnetName'))]",
-    "dataDisk1VhdName": "[concat('http://',parameters('newStorageAccountName'),'.blob.core.windows.net/',variables('vmStorageAccountContainerName'),'/',variables('vmName'),'dataDisk1.vhd')]",
+    "dataDisk1VhdName": "[concat('http://',parameters('newStorageAccountName'),'.blob.core.windows.net/',variables('vmStorageAccountContainerName'),'/',variables('vmName'),'dataDisk1.vhd')]"
   },
   "resources": [
     {
@@ -176,9 +176,8 @@
             },
             "caching": "ReadWrite",
             "createOption": "FromImage"
-          }
-        },
-        "dataDisks": [
+          },
+          "dataDisks": [
             {
               "name": "datadisk1",
               "diskSizeGB": "[parameters('sizeOfDiskInGB')]",
